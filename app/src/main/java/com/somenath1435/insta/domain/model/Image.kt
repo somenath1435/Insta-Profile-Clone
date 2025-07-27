@@ -1,4 +1,4 @@
-package com.somenath1435.insta.domain
+package com.somenath1435.insta.domain.model
 
 data class Image(
     val id: String,

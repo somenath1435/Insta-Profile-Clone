@@ -1,12 +1,12 @@
-package com.somenath1435.insta.presentation
+package com.somenath1435.insta.presentation.viewmodel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.somenath1435.insta.domain.GetImagesUseCase
-import com.somenath1435.insta.domain.Image
+import com.somenath1435.insta.domain.usecase.GetImagesUseCase
+import com.somenath1435.insta.domain.model.Image
 import kotlinx.coroutines.launch
 
 class ProfileViewModel(private val getImagesUseCase: GetImagesUseCase) : ViewModel() {

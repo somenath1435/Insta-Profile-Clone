@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.somenath1435.insta.presentation.ProfileViewModel
+import com.somenath1435.insta.presentation.viewmodel.ProfileViewModel
 import com.somenath1435.insta.presentation.screens.ProfileScreen
 import com.somenath1435.insta.presentation.screens.StoryPlayerScreen
 

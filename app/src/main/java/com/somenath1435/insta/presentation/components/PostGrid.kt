@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
-import com.somenath1435.insta.domain.Image
+import com.somenath1435.insta.domain.model.Image
 
 @Composable
 fun PostGrid(images: List<Image>) {

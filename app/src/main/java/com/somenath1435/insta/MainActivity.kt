@@ -9,10 +9,10 @@ import androidx.compose.material3.Surface
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.compose.rememberNavController
-import com.somenath1435.insta.data.ApiService
-import com.somenath1435.insta.data.ImageRepositoryImpl
-import com.somenath1435.insta.domain.GetImagesUseCase
-import com.somenath1435.insta.presentation.ProfileViewModel
+import com.somenath1435.insta.data.remote.ApiService
+import com.somenath1435.insta.data.repository.ImageRepositoryImpl
+import com.somenath1435.insta.domain.usecase.GetImagesUseCase
+import com.somenath1435.insta.presentation.viewmodel.ProfileViewModel
 import com.somenath1435.insta.presentation.navigation.AppNavHost
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

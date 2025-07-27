@@ -1,4 +1,4 @@
-package com.somenath1435.insta.data
+package com.somenath1435.insta.data.remote
 
 data class ImageDto(
     val id: String,

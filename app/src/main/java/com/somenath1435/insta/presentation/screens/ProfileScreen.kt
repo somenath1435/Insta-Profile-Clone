@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.somenath1435.insta.presentation.ProfileViewModel
+import com.somenath1435.insta.presentation.viewmodel.ProfileViewModel
 import com.somenath1435.insta.presentation.components.HighlightsSection
 import com.somenath1435.insta.presentation.components.InstagramTopBar
 import com.somenath1435.insta.presentation.components.PostGrid

@@ -1,4 +1,4 @@
-package com.somenath1435.insta.data
+package com.somenath1435.insta.data.remote
 
 import retrofit2.http.GET
 import retrofit2.http.Query
