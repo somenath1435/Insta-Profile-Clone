@@ -7,9 +7,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.somenath1435.insta.domain.usecase.GetImagesUseCase
 import com.somenath1435.insta.domain.model.Image
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class ProfileViewModel(private val getImagesUseCase: GetImagesUseCase) : ViewModel() {
+@HiltViewModel
+class ProfileViewModel @Inject constructor(private val getImagesUseCase: GetImagesUseCase) : ViewModel() {
     var images by mutableStateOf<List<Image>>(emptyList())
         private set
 

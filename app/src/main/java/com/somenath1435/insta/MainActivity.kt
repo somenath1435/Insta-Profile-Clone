@@ -1,43 +1,25 @@
 package com.somenath1435.insta
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.rememberNavController
-import com.somenath1435.insta.data.remote.ApiService
-import com.somenath1435.insta.data.repository.ImageRepositoryImpl
-import com.somenath1435.insta.domain.usecase.GetImagesUseCase
 import com.somenath1435.insta.presentation.viewmodel.ProfileViewModel
 import com.somenath1435.insta.presentation.navigation.AppNavHost
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://picsum.photos/v2/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        val apiService = retrofit.create(ApiService::class.java)
-        val imageRepository = ImageRepositoryImpl(apiService)
-        val getImagesUseCase = GetImagesUseCase(imageRepository)
-
-        // Create ViewModel using a custom factory
-        val viewModel = ViewModelProvider(
-            this,
-            ProfileViewModelFactory(getImagesUseCase)
-        )[ProfileViewModel::class.java]
 
         setContent {
             val navController = rememberNavController()
+            val viewModel: ProfileViewModel = hiltViewModel()
 
             MaterialTheme {
                 Surface {
@@ -48,13 +30,5 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-}
-
-class ProfileViewModelFactory(
-    private val getImagesUseCase: GetImagesUseCase
-) : ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return ProfileViewModel(getImagesUseCase) as T
     }
 }
