@@ -18,6 +18,10 @@ A modern Instagram profile screen clone built using **Jetpack Compose** with cle
 - Material 3
 - Android Studio Giraffe/Koala
 
+## Screenshot
+<img src="https://github.com/somenath1435/Insta-Profile-Clone/blob/main/Screenshot_20250727_230406.png" alt="Instagram Profile Screen" width="360" height="720" />
+
+
 ## 🚀 Getting Started
 
 1. **Clone the repository**
